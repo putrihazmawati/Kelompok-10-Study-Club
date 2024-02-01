@@ -1,0 +1,17 @@
+1. Deskripsi Umum Sistem
+"Sistem Informasi Posyandu Harapan" adalah platform berbasis web yang dirancang untuk mencatat dan memonitor data pasien yang berkunjung ke posyandu.
+Sistem ini berfokus pada pelayanan kesehatan bagi ibu, bayi, dan anak balita. Dengan fitur login dan registrasi, serta laman dashboard, sistem ini
+memungkinkan petugas posyandu untuk mencatat informasi pasien dengan mudah dan memberikan layanan kesehatan yang lebih efektif.
+
+2. Fungsi Utama
+2.1. Pencatatan Pasien
+   - Mencatat data pasien, termasuk informasi ibu hamil, bayi, dan anak balita.
+   - Memantau perkembangan kesehatan pasien secara berkala.
+   - Menyediakan formulir isian untuk data pribadi, riwayat kesehatan, dan imunisasi.
+2.2. Dashboard
+   - Menampilkan ringkasan data pasien, termasuk statistik jumlah ibu hamil, bayi, dan anak balita.
+   - Grafik visualisasi perkembangan kesehatan untuk memudahkan pemantauan.
+   - Akses cepat ke informasi penting dan tugas yang harus dilakukan.
+2.3. Registrasi dan Login
+   - Memungkinkan petugas posyandu untuk membuat akun baru (registrasi) dengan otorisasi administrator.
+   - Sistem login yang aman untuk mengakses fitur-fitur tertentu berdasarkan hak akses.
