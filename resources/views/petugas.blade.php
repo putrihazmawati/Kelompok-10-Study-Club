@@ -40,23 +40,24 @@
             text-align: center;
             color: #888;
         }
-
-        /* tombol kembali */
-        .back-button {
-            display: inline-block;
-            padding: 10px;
-            background-color: #4caf50;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
+        /* tombol */
+        .button-container {
+            text-align: center;
             margin-top: 20px;
-            
-            
         }
 
-        .back-button:hover {
-            background-color: #555;
+        .button-container button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            margin: 5px;
+            cursor: pointer;
+        }
 
+        .button-container button:hover {
+            background-color: #45a049;
         }
 
     </style>
@@ -70,8 +71,8 @@
             <thead>
                 <tr>
                     <th>NO</th>
-                    <th>Nama Pengguna</th>
-                    
+                    <th>Nama Pengguna Petugas Harian</th>
+ 
                 </tr>
             </thead>
             <tbody>
@@ -79,20 +80,17 @@
                     <tr>
                         <td>{{ $p->id }}</td>
                         <td>{{ $p->nama_pengguna }}</td>
-                        
-                        
                     </tr>
                 @endforeach
-                
-                
             </tbody>
-            
         </table>
     @else
         <p>Tidak ada petugas yang tersedia.</p>
     @endif
-
-    <a align: 'center' href="{{ route('dashboard') }}" class="back-button">Kembali ke Dashboard</a>
+    <div class="button-container">
+    <button type="back-button" onclick="window.location.href='http://127.0.0.1:8000/petugas/create'">Kembali</button>
+    <button type="back-button" onclick="window.location.href='http://127.0.0.1:8000/pasien/create'">Tambah Data Pasien</button>
+    </div>
     
 
 </body>

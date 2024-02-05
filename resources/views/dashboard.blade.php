@@ -47,8 +47,8 @@
 
 <body>
     <div class="container">
-        <h1>PENCATATAN POSYANDU</h1>
-        <p>Pencatatan dan Perbaikan Perilaku, Keadaan Gizi dan Kesehatan Keluarga</p>
+        <h1>POSYANDU HARAPAN</h1>
+        <p>Pencatatan Terhadap Perubahan Perilaku, Keadaan Gizi dan Kesehatan Keluarga <3</p>
 
         <div class="button-container">
             <button class="register-button" onclick="redirectToRegistration()">Registrasi</button>
@@ -57,7 +57,7 @@
 
    <script>
         function redirectToRegistration() {
-            // URL sesuai dengan rute registrasi petugas posyandu
+            // URL sesuai registrasi petugas posyandu
             window.location.href = "http://127.0.0.1:8000/petugas/create";
         }
     </script>

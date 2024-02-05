@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registrasi Petugas</title>
+    <title>Form Edit Data Pasien</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -27,7 +27,7 @@
             box-sizing: border-box;
         }
 
-        h1 {
+        h2 {
             text-align: center;
             color: #333;
         }
@@ -38,7 +38,8 @@
             color: #555;
         }
 
-        input {
+        input,
+        select {
             width: 100%;
             padding: 10px;
             margin-bottom: 15px;
@@ -50,21 +51,16 @@
         button {
             background-color: #4caf50;
             color: #fff;
-            padding: 10px; /* Menyesuaikan panjang tombol*/
-            width: 100%; /* Mengisi lebar sesuai parent*/
+            padding: 10px;
             border: none;
             border-radius: 5px;
-            margin-bottom: 15px; /* Memberi jarak antara tombol dengan elemen di atasnya*/
+            cursor: pointer;
         }
 
         button:hover {
             background-color: #45a049;
         }
 
-        p {
-            color: green;
-            text-align: center;
-        }
         button {
             background-color: #4caf50;
             color: #fff;
@@ -77,20 +73,31 @@
 </head>
 
 <body>
-    <form action="{{ route('petugas.store') }}" method="post">
-        @csrf
+    <form action="{{ route('pasien.update', $pasien->id) }}" method="post">
+        @csrf @method('put')
+        <h2>Form Edit Data Pasien</h2>
 
-        <h1>Registrasi Petugas</h1>
+        <label for="id">ID Pasien:</label>
+        <input type="text" id="id" name="id" value="{{ $pasien->id }}" required>
 
-        <label for="nama_pengguna">Nama Pengguna:</label>
-        <input type="text" id="nama_pengguna" name="nama_pengguna" required>
+        <label for="kategori">Kategori Pasien:</label>
+        <select id="kategori" name="kategori" required>
+            <option value="ibu_hamil" {{ $pasien->kategori == 'ibu_hamil' ? 'selected' : '' }}>Ibu Hamil</option>
+            <option value="bayi" {{ $pasien->kategori == 'bayi' ? 'selected' : '' }}>Bayi</option>
+            <option value="balita" {{ $pasien->kategori == 'balita' ? 'selected' : '' }}>Balita</option>
+        </select>
 
-        <label for="pw">Password:</label>
-        <input type="password" id="pw" name="pw" required>
+        <label for="nama">Nama Pasien:</label>
+        <input type="text" id="nama" name="nama" value="{{ $pasien->nama }}" required>
 
-        <button type="submit">Registrasi</button>
+        <label for="usia">Usia Pasien:</label>
+        <input type="text" id="usia" name="usia" value="{{ $pasien->usia }}" required>
 
-        <button type="button" onclick="window.location.href='http://127.0.0.1:8000/dashboard'">Batal</button>
+        <label for="alamat">Alamat Pasien:</label>
+        <input type="text" id="alamat" name="alamat" value="{{ $pasien->alamat }}" required>
+
+        <button type="submit">Simpan Perubahan</button>
+        <button type="back-button" onclick="window.location.href='http://127.0.0.1:8000/pasien'">Batal</button>
     </form>
 </body>
 

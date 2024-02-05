@@ -29,3 +29,8 @@ Route::resource('petugas', PetugasController::class);
 //mendefinisikan route dashboard di dalam file web.php
 use App\Http\Controllers\DashboardController;
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+
+//untuk memanggil pasien.controller
+Use App\Http\Controllers\PasienController;
+Route::resource('pasien', PasienController::class);
